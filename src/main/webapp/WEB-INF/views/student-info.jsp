@@ -17,8 +17,12 @@
 		List<Student> students = (List<Student>) request.getAttribute("studentInfo");
 		out.println("<table border=1><tr><th>Id</th><th>Name</th><th>Department</th><th>Country</th><th>Delete</th><th>Update</th></tr>");
 		for (Student s : students) {
-			out.println("<tr><td>" + s.getId() + "</td><td>" + s.getName() + "</td><td>" + s.getDepartment() + "</td><td>"
-			+ s.getCountry() + "</td><td><a href='/Lab5_studentDebate/Student/delete-student?id=" + s.getId() + "'>Delete</a></td><td><a href='/Lab5_studentDebate/Student/update-student?id=" + s.getId() + "'>Update</a></td></tr>");
+			out.println("<tr><td>" + s.getId() + 
+					"</td><td>" + s.getName() + 
+					"</td><td>" + s.getDepartment() + 
+					"</td><td>"
+			+ s.getCountry() + "</td><td><a href='/Lab5_studentDebate/Student/delete-student?id=" + s.getId() +
+			"'>Delete</a></td><td><a href='/Lab5_studentDebate/Student/update-student/" + s.getId() + "'>Update</a></td></tr>");
 		}
 
 		out.println("</table>");

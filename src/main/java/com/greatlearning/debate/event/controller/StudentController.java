@@ -30,8 +30,8 @@ public class StudentController {
 	public String addStudentDetails(@RequestParam("id") Integer id, @RequestParam("name") String name,
 			@RequestParam("department") String department, @RequestParam("country") String country) {
 		
-			Student student = new Student(id, name, department, country);
-			studentService.addStudent(student);
+		Student student = new Student(id, name, department, country);
+		studentService.addStudent(student);
 		return "redirect:show-students";
 	}
 	
@@ -55,10 +55,11 @@ public class StudentController {
 		return "redirect:show-students";
 	}
 	   
-	@RequestMapping("/update-student/edit/{id}")
-    public String editemployee(@PathVariable("id") Integer id, Model model) {
-        model.addAttribute("employee", studentService.getStudent(id));
-        model.addAttribute("employeeList", studentService.getAllStudents());
-        return "employee";
-    } 
+	@RequestMapping(method = RequestMethod.GET, value="/update-student/{id}")    
+    public String edit(@PathVariable Integer id, Model model){    
+		
+        Student student = studentService.getStudent(id);    
+        model.addAttribute("command", student);  
+        return "update-form";    
+    }    
 }
