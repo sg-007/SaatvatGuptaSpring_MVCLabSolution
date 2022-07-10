@@ -23,17 +23,17 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student getStudent(int id) {
+	public Student getStudent(Integer id) {
 		return studentDao.findStudent(id);
 	}
-
+	
 	@Override
 	public Student updateStudent(Student student) {
 		return studentDao.Update(student);
 	}
 
 	@Override
-	public boolean deleteStudent(int id) {
+	public boolean deleteStudent(Integer id) {
 		return studentDao.Delete(id);
 	}
 

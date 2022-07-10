@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Management</title>
 </head>
 <body>
 	<div>
@@ -12,11 +12,16 @@
 		<h1>Welcome to Student Management</h1>
 
 		<form action="/Lab5_studentDebate/Student/new-student" method="post">
-			<input type="hidden" name="id" placeholder="StudentId" /> <br>
-			<input type="text" name="name" placeholder="Name" /> <br> <input
-				type="text" name="department" placeholder="Department" /> <br>
-			<input type="text" name="country" placeholder="Country" /> <br>
-			<br> <input type="submit" name="s" value="Save" />
+			<input type="hidden" name="id" placeholder="StudentId" /> 
+			<br>
+			<input type="text" name="name" placeholder="Name" /> 
+			<br> 
+			<input type="text" name="department" placeholder="Department" /> 
+			<br>
+			<input type="text" name="country" placeholder="Country" /> 
+			<br>
+			<br> 
+			<input type="submit" name="s" value="Save" />
 
 
 		</form>

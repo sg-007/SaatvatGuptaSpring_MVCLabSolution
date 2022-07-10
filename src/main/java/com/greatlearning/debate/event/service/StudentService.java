@@ -8,11 +8,11 @@ public interface StudentService {
 
 	public Student addStudent(Student student);
 
-	public Student getStudent(int id);
-
+	public Student getStudent(Integer id);
+	
 	public Student updateStudent(Student student);
 
-	public boolean deleteStudent(int id);
+	public boolean deleteStudent(Integer id);
 
 	public List<Student> getAllStudents();
 

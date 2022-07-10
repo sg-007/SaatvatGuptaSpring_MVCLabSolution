@@ -32,13 +32,12 @@ public class StudentDaoImpl implements StudentDao {
 
 	@Override
 	public Student Update(Student student) {
-		sessionFactory.getCurrentSession();
 		session.update(student);
 		return student;
 	}
 
 	@Override
-	public boolean Delete(int id) {
+	public boolean Delete(Integer id) {
 		Student retrieved = findStudent(id);
 		session.getTransaction().begin();
 		session.delete(retrieved);
@@ -49,7 +48,7 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public Student findStudent(int id) {
+	public Student findStudent(Integer id) {
 		return session.find(Student.class, id);
 	}
 

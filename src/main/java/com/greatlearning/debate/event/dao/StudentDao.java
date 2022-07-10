@@ -10,9 +10,10 @@ public interface StudentDao {
 
 	public Student Update(Student student);
 
-	public boolean Delete(int id);
+	public boolean Delete(Integer id);
 
-	public Student findStudent(int id);
+	public Student findStudent(Integer id);
 
 	public List<Student> retrieveDetails();
+
 }
