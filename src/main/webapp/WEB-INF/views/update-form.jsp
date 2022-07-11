@@ -1,8 +1,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
-        <h1>Update Student</h1>  
-       <form:form method="POST" action="/Lab5_studentDebate/Student/update">    
+        <h1>Edit Student</h1>  
+       <form:form method="POST" action="/Lab5_studentDebate/Student/update-student/{id}">    
         <table >    
         <tr>  
         <td></td>    
@@ -13,16 +13,17 @@
           <td><form:input path="name"  /></td>  
          </tr>    
          <tr>    
-          <td>Department :</td>    
+          <td>Department : </td>    
           <td><form:input path="department" /></td>  
          </tr>   
          <tr>    
-          <td>Country :</td>    
+          <td>Country : </td>    
           <td><form:input path="country" /></td>  
          </tr>   
+           
          <tr>    
           <td> </td>    
-          <td><input type="submit" name = "s" value="Update" /></td>    
+          <td><input type="submit" value="Save" /></td>    
          </tr>    
         </table>    
        </form:form>
