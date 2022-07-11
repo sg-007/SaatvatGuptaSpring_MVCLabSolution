@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
         <h1>Update Student</h1>  
-       <form:form method="GET" action="/Lab5_studentDebate/Student/show-students">    
+       <form:form method="POST" action="/Lab5_studentDebate/Student/update">    
         <table >    
         <tr>  
         <td></td>    
@@ -20,10 +20,9 @@
           <td>Country :</td>    
           <td><form:input path="country" /></td>  
          </tr>   
-           
          <tr>    
           <td> </td>    
-          <td><input type="submit" name = "s" value="Save" /></td>    
+          <td><input type="submit" name = "s" value="Update" /></td>    
          </tr>    
         </table>    
        </form:form>

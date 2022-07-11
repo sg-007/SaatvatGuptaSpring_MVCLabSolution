@@ -1,6 +1,8 @@
 package com.greatlearning.debate.event.dao;
 
 import java.util.List;
+
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +13,6 @@ import com.greatlearning.debate.event.entity.Student;
 @Repository
 public class StudentDaoImpl implements StudentDao {
 
-	private SessionFactory sessionFactory;
 	private Session session;
 	
 	public StudentDaoImpl(SessionFactory sessionFactory) {
@@ -24,15 +25,13 @@ public class StudentDaoImpl implements StudentDao {
 	
 	@Override
 	public Student Insert(Student student) {
-		//Transaction tx = session.beginTransaction();
 		session.save(student);
-		//tx.commit();
 		return student;
 	}
 
 	@Override
 	public Student Update(Student student) {
-		session.update(student);
+		session.save(student);
 		return student;
 	}
 

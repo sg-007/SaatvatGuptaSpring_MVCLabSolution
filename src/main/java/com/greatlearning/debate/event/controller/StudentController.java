@@ -56,16 +56,19 @@ public class StudentController {
 		return "redirect:show-students";
 	}
 	   
-	@RequestMapping("/update-student/{id}")    
-    public String Update(@PathVariable Integer id, Model model){    
-		
+	@RequestMapping("/update-student")    
+    public String Update(@RequestParam("id") Integer id, Model model){    
         Student student = studentService.getStudent(id);    
         model.addAttribute("command", student);  
         return "update-form";    
     }    
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	 public String updateStudent(@ModelAttribute("student") Student student) {
+	 public String updateStudent(@RequestParam("id") Integer id) {
+		Student student = studentService.getStudent(id);
+		student.setName(student.getName());
+		student.setDepartment(student.getCountry());
+		student.setCountry(student.getCountry());
 	    studentService.updateStudent(student);
 	    return "redirect:show-students";
 	}
