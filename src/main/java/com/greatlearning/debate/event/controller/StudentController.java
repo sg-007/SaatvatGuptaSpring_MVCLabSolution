@@ -64,11 +64,12 @@ public class StudentController {
     }    
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	 public String updateStudent(@RequestParam("id") Integer id) {
+	 public String updateStudent(@RequestParam("id") Integer id, @RequestParam("name") String name,
+				@RequestParam("department") String department, @RequestParam("country") String country) {
 		Student student = studentService.getStudent(id);
-		student.setName(student.getName());
-		student.setDepartment(student.getCountry());
-		student.setCountry(student.getCountry());
+		student.setName(name);
+		student.setDepartment(department);
+		student.setCountry(country);
 	    studentService.updateStudent(student);
 	    return "redirect:show-students";
 	}
